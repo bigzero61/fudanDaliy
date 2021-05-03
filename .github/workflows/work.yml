@@ -2,7 +2,7 @@ name: Fudan Daily
 
 on:
   schedule:
-    - cron: '49 15 * * *'
+    - cron: '01 00 * * *'
 
 jobs:
   build:
@@ -20,6 +20,6 @@ jobs:
       - name: Run app
         run: python fudanDaily.py
         env:
-          USERNAME: ${{ secrets.USERNAME1 }}
-          PASSWORD: ${{ secrets.PASSWORD1 }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
